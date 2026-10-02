@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="George Oommen - IT Support, Systems Administration, Networking and Cybersecurity portfolio.">
+    <meta name="description" content="George Oommen - IT Support Analyst, IT Operations and NOC-focused portfolio covering endpoint management, networking, systems administration and technical support.">
     <meta name="author" content="George Oommen">
-    <title>George Oommen | IT Support • Systems • Networking • Cybersecurity</title>
+    <title>George Oommen | IT Support • IT Operations • NOC • Endpoint Management</title>
 
     <style>
         :root {
@@ -420,6 +420,142 @@
             gap: 20px;
         }
 
+
+        /* Portfolio upgrade */
+        .hero-kicker {
+            color: var(--accent);
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .achievement-strip {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .achievement {
+            padding: 30px 24px;
+            border-right: 1px solid var(--border);
+        }
+
+        .achievement:last-child { border-right: none; }
+
+        .achievement-number {
+            font-size: clamp(2rem, 4vw, 2.7rem);
+            line-height: 1;
+            font-weight: 750;
+            letter-spacing: -0.06em;
+            margin-bottom: 9px;
+        }
+
+        .achievement-label {
+            color: var(--accent);
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .achievement p { color: var(--muted); font-size: 0.78rem; }
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .about-intro .lead {
+            color: var(--text);
+            font-size: clamp(1.15rem, 2vw, 1.35rem);
+            line-height: 1.55;
+            margin-bottom: 24px;
+        }
+
+        .about-intro p:not(.lead) { color: var(--muted); margin-bottom: 20px; }
+
+        .about-details { border-top: 1px solid var(--border); }
+
+        .about-item {
+            display: grid;
+            grid-template-columns: 45px 1fr;
+            gap: 16px;
+            padding: 22px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-item > span {
+            color: var(--accent);
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.75rem;
+        }
+
+        .about-item h3 { font-size: 1rem; margin-bottom: 5px; }
+        .about-item p { color: var(--muted); font-size: 0.86rem; }
+
+        .project-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .project-arrow { color: var(--accent); font-size: 0.8rem; white-space: nowrap; }
+
+        .education-card {
+            display: grid;
+            grid-template-columns: 190px 1fr;
+            gap: 35px;
+            padding: 32px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .education-year {
+            color: var(--accent);
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.76rem;
+        }
+
+        .education-card h3 { font-size: 1.25rem; margin-bottom: 5px; }
+        .education-school { color: var(--muted-strong); margin-bottom: 12px; }
+        .education-card p { color: var(--muted); font-size: 0.9rem; }
+
+        .honours {
+            display: inline-flex;
+            margin-top: 14px;
+            padding: 6px 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--accent-bright);
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.72rem;
+        }
+
+        @media (max-width: 900px) {
+            .achievement-grid { grid-template-columns: repeat(2, 1fr); }
+            .achievement:nth-child(2) { border-right: none; }
+            .achievement:nth-child(-n + 2) { border-bottom: 1px solid var(--border); }
+            .about-layout { grid-template-columns: 1fr; gap: 45px; }
+        }
+
+        @media (max-width: 560px) {
+            .achievement { padding: 24px 17px; }
+            .achievement-number { font-size: 2rem; }
+            .education-card { grid-template-columns: 1fr; gap: 10px; }
+        }
+
         /* Mobile */
         @media (max-width: 850px) {
             .nav-links {
@@ -473,6 +609,98 @@
                 flex-direction: column;
             }
         }
+    
+        /* Detailed experience / project bullets */
+        .experience-card ul,
+        .project-details {
+            color: var(--muted);
+            font-size: 0.9rem;
+            padding-left: 20px;
+        }
+
+        .experience-card li,
+        .project-details li {
+            margin: 7px 0;
+        }
+
+        .experience-card li::marker,
+        .project-details li::marker {
+            color: var(--accent);
+        }
+
+        .role-highlight {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 0 0 18px 0;
+        }
+
+        .role-badge {
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--accent-strong);
+            border-radius: 6px;
+            padding: 5px 9px;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.02em;
+        }
+
+        .achievement-callout {
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-left: 2px solid var(--accent);
+            background: var(--bg-secondary);
+            color: var(--muted-strong);
+            font-size: 0.86rem;
+        }
+
+        .achievement-callout strong {
+            color: var(--text);
+        }
+
+        .project-card {
+            min-height: 390px;
+        }
+
+        .project-details {
+            margin: 0 0 20px 0;
+        }
+
+        .project-details li {
+            margin: 5px 0;
+        }
+
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .strength-card {
+            padding: 23px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .strength-card h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .strength-card p {
+            color: var(--muted);
+            font-size: 0.87rem;
+        }
+
+        @media (max-width: 850px) {
+            .strengths-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     </style>
 </head>
 
@@ -488,6 +716,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -502,26 +731,31 @@
 
                     <div class="status">
                         <span class="status-dot"></span>
-                        Open to IT opportunities
+                        Open to full-time IT opportunities
                     </div>
 
                     <h1>George Oommen</h1>
 
+                    <div class="hero-kicker">
+                        IT Support Analyst / IT Operations
+                    </div>
+
                     <div class="hero-title">
-                        IT Support • Systems • Networking • Cybersecurity
+                        IT Support • Endpoint Management • Microsoft 365 • Infrastructure
                     </div>
 
                     <p class="hero-description">
-                        Computer Systems Technician focused on practical IT infrastructure,
-                        endpoint management, networking, cloud technologies and cybersecurity.
-                        This portfolio documents the systems I build, troubleshoot and learn from.
+                        Computer Systems Technician graduate focused on practical IT support,
+                        endpoint management, systems administration, networking and infrastructure.
+                        I build, troubleshoot and document systems to understand not only how to
+                        fix a problem, but why it happened.
                     </p>
 
                     <div class="buttons">
                         <a class="button primary" href="#projects">View Projects</a>
 
                         <!-- Replace this with your actual resume filename once uploaded -->
-                        <a class="button" href="documents/George-Oommen_IT Support Analyst.pdf">
+                        <a class="button" href="documents/George-Oommen-Resume.pdf">
                             Download Resume
                         </a>
 
@@ -540,51 +774,104 @@
             </div>
         </header>
 
+        <!-- Achievements -->
+        <div class="achievement-strip">
+            <div class="container achievement-grid">
+                <div class="achievement">
+                    <div class="achievement-number">4.0</div>
+                    <div class="achievement-label">CGPA</div>
+                    <p>Computer Systems Technician</p>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">4×</div>
+                    <div class="achievement-label">President's List</div>
+                    <p>Academic recognition</p>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">275+</div>
+                    <div class="achievement-label">Support Cases</div>
+                    <p>Seneca service desk experience</p>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-number">90+</div>
+                    <div class="achievement-label">Peak / Week</div>
+                    <p>High-volume service desk periods</p>
+                </div>
+            </div>
+        </div>
+
         <!-- About -->
         <section id="about">
             <div class="container">
-
                 <div class="section-heading">
-                    <div class="eyebrow">01 / About</div>
+                    <div class="eyebrow">01 / About Me</div>
                     <h2>Technical mindset. Practical experience.</h2>
-
                     <p class="section-description">
-                        My experience spans frontline IT support, endpoint administration,
-                        Microsoft technologies, networking and hands-on cybersecurity labs.
-                        I use this site to document the technical problems I've worked on,
-                        the solutions I've implemented and the projects I've built.
+                        A portfolio of the systems I've supported, the infrastructure
+                        I've built, and the technical problems I've worked through.
                     </p>
                 </div>
 
-                <div class="focus-grid">
-
-                    <div class="focus-card">
-                        <div class="focus-number">01</div>
-                        <h3>IT Infrastructure</h3>
+                <div class="about-layout">
+                    <div class="about-intro">
+                        <p class="lead">
+                            I'm George Oommen, a Computer Systems Technician graduate from
+                            Seneca Polytechnic with High Honours and a 4.0/4.0 CGPA. My
+                            experience combines real-world IT support with hands-on work in
+                            endpoint management, networking, cloud infrastructure and security.
+                        </p>
                         <p>
-                            Windows environments, endpoint administration, hardware,
-                            software deployment, imaging and technical support.
+                            My approach to IT is based on structured troubleshooting. When
+                            something breaks, I want to understand the environment, isolate
+                            the problem, identify the root cause, test the solution and
+                            document what changed.
+                        </p>
+                        <p>
+                            I've applied that approach in professional service-desk and
+                            technology environments through Windows troubleshooting,
+                            Microsoft 365, endpoint deployment, hardware support, asset
+                            management, remote support, Microsoft Intune and infrastructure
+                            projects.
+                        </p>
+                        <p>
+                            Outside production environments, I use virtual machines and cloud
+                            labs to go deeper into networking, systems administration and
+                            security. These projects give me a place to experiment safely,
+                            investigate failures and turn what I learn into documented
+                            technical knowledge.
                         </p>
                     </div>
 
-                    <div class="focus-card">
-                        <div class="focus-number">02</div>
-                        <h3>Networking</h3>
-                        <p>
-                            TCP/IP, VLANs, routing, VPNs, subnetting, network
-                            troubleshooting and packet analysis.
-                        </p>
+                    <div class="about-details">
+                        <div class="about-item">
+                            <span>01</span>
+                            <div>
+                                <h3>IT Support & Operations</h3>
+                                <p>Ticket triage, incident handling, user support, onboarding, hardware and software deployment.</p>
+                            </div>
+                        </div>
+                        <div class="about-item">
+                            <span>02</span>
+                            <div>
+                                <h3>Endpoint Management</h3>
+                                <p>Windows endpoint administration, Microsoft Intune, application packaging, device deployment and remote troubleshooting.</p>
+                            </div>
+                        </div>
+                        <div class="about-item">
+                            <span>03</span>
+                            <div>
+                                <h3>Networking & Infrastructure</h3>
+                                <p>TCP/IP, DNS, DHCP, VPN connectivity, Azure networking, virtual machines and infrastructure troubleshooting.</p>
+                            </div>
+                        </div>
+                        <div class="about-item">
+                            <span>04</span>
+                            <div>
+                                <h3>Security & Monitoring</h3>
+                                <p>Network analysis, vulnerability assessment and hands-on security lab environments.</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="focus-card">
-                        <div class="focus-number">03</div>
-                        <h3>Cybersecurity</h3>
-                        <p>
-                            Security monitoring, vulnerability assessment, SIEM,
-                            IDS/IPS, network analysis and security lab environments.
-                        </p>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -592,14 +879,13 @@
         <!-- Projects -->
         <section id="projects">
             <div class="container">
-
                 <div class="section-heading">
-                    <div class="eyebrow">02 / Featured Projects</div>
-                    <h2>Things I've built and investigated.</h2>
-
+                    <div class="eyebrow">03 / Featured Projects</div>
+                    <h2>Things I've built, tested and investigated.</h2>
                     <p class="section-description">
-                        Detailed project pages will document the architecture, implementation,
-                        troubleshooting process, challenges and lessons learned behind each project.
+                        Practical projects covering endpoint management, cloud networking,
+                        systems administration and enterprise networking. Each project is
+                        written around what I actually configured, tested or troubleshot.
                     </p>
                 </div>
 
@@ -608,98 +894,148 @@
                     <a href="#" class="project-card">
                         <div class="project-type">ENDPOINT MANAGEMENT</div>
                         <h3>Microsoft Intune Application Deployment</h3>
-                        <p>
-                            Packaged and deployed Win32 applications through Microsoft Intune,
-                            including installation commands, detection rules, dependencies and
-                            troubleshooting of deployment failures.
-                        </p>
 
-                        <div class="tags">
-                            <span class="tag">Intune</span>
-                            <span class="tag">PowerShell</span>
-                            <span class="tag">Win32 Apps</span>
-                            <span class="tag">Windows</span>
+                        <ul class="project-details">
+                            <li>Packaged Windows applications as Win32 apps for Microsoft Intune deployment.</li>
+                            <li>Worked with installation and uninstall commands, detection rules, dependencies and deployment requirements.</li>
+                            <li>Packaged applications including Adobe Acrobat Reader, Google Chrome, Atera Agent, NinjaOne Agent, TeamViewer, Dialpad, Rufus and other business applications.</li>
+                            <li>Troubleshot real deployment failures including installation, detection, supersedence and dependency errors.</li>
+                            <li>Used PowerShell-based installation and detection logic where required.</li>
+                            <li>Validated deployments on individual devices before broader rollout.</li>
+                        </ul>
+
+                        <div class="project-footer">
+                            <div class="tags">
+                                <span class="tag">Intune</span>
+                                <span class="tag">Win32</span>
+                                <span class="tag">Windows</span>
+                                <span class="tag">PowerShell</span>
+                            </div>
+                            <span class="project-arrow">Case study →</span>
                         </div>
                     </a>
+
 
                     <a href="#" class="project-card">
-                        <div class="project-type">CLOUD / NETWORKING</div>
-                        <h3>Azure Network Infrastructure</h3>
-                        <p>
-                            Designed and tested an Azure network environment involving VNets,
-                            subnets, VPN connectivity, routing and network security controls.
-                        </p>
+                        <div class="project-type">AZURE / NETWORKING</div>
+                        <h3>Hybrid Site-to-Site IPsec VPN</h3>
 
-                        <div class="tags">
-                            <span class="tag">Azure</span>
-                            <span class="tag">VNet</span>
-                            <span class="tag">VPN</span>
-                            <span class="tag">NSG</span>
+                        <ul class="project-details">
+                            <li>Designed a hybrid connectivity project between an on-premises virtual environment and Microsoft Azure.</li>
+                            <li>Worked with Azure Virtual Network, Azure VPN Gateway, routing and IPsec VPN configuration.</li>
+                            <li>Used VMware and a Linux-based VPN environment while testing connectivity between the two networks.</li>
+                            <li>Investigated routing, gateway and tunnel connectivity during testing.</li>
+                            <li>The final connection was limited by the ISP blocking the required VPN traffic/ports, providing a practical lesson in identifying external dependencies.</li>
+                            <li>Documented the architecture, testing process and the technical limitation rather than treating the incomplete deployment as a success.</li>
+                        </ul>
+
+                        <div class="project-footer">
+                            <div class="tags">
+                                <span class="tag">Azure</span>
+                                <span class="tag">IPsec</span>
+                                <span class="tag">VPN</span>
+                                <span class="tag">VMware</span>
+                            </div>
+                            <span class="project-arrow">Case study →</span>
                         </div>
                     </a>
+
 
                     <a href="#" class="project-card">
-                        <div class="project-type">CYBERSECURITY</div>
-                        <h3>Cybersecurity Detection Lab</h3>
-                        <p>
-                            Built a virtual security environment using SIEM, IDS/IPS,
-                            vulnerability scanning and network-analysis tools to investigate
-                            security events and network activity.
-                        </p>
+                        <div class="project-type">CLOUD INFRASTRUCTURE</div>
+                        <h3>Secure Azure VM Deployment</h3>
 
-                        <div class="tags">
-                            <span class="tag">Splunk</span>
-                            <span class="tag">Suricata</span>
-                            <span class="tag">OSSIM</span>
-                            <span class="tag">Nessus</span>
+                        <ul class="project-details">
+                            <li>Created an Azure Virtual Network and subnet for a Linux virtual machine.</li>
+                            <li>Configured Network Security Group rules to control permitted traffic.</li>
+                            <li>Worked with private networking concepts and secure administrative access.</li>
+                            <li>Used SSH for remote administration and connectivity validation.</li>
+                            <li>Tested network access and security controls while troubleshooting connectivity.</li>
+                            <li>Used the project to strengthen understanding of Azure networking and cloud infrastructure fundamentals.</li>
+                        </ul>
+
+                        <div class="project-footer">
+                            <div class="tags">
+                                <span class="tag">Azure</span>
+                                <span class="tag">VNet</span>
+                                <span class="tag">NSG</span>
+                                <span class="tag">Linux</span>
+                            </div>
+                            <span class="project-arrow">Case study →</span>
                         </div>
                     </a>
+
 
                     <a href="#" class="project-card">
                         <div class="project-type">SYSTEMS ADMINISTRATION</div>
-                        <h3>Windows Server Homelab</h3>
-                        <p>
-                            Developed a virtualized Windows and Linux environment for practicing
-                            system administration, networking, services and infrastructure management.
-                        </p>
+                        <h3>Windows & Linux Homelab</h3>
 
-                        <div class="tags">
-                            <span class="tag">Windows Server</span>
-                            <span class="tag">VMware</span>
-                            <span class="tag">Linux</span>
-                            <span class="tag">Virtualization</span>
+                        <ul class="project-details">
+                            <li>Built a virtualized lab using Windows Server, Windows 10 and Linux virtual machines.</li>
+                            <li>Used VMware and VirtualBox to create isolated environments for systems and networking practice.</li>
+                            <li>Worked with Windows Server administration, networking services and endpoint troubleshooting.</li>
+                            <li>Used Kali Linux and other security-focused systems for controlled lab experimentation.</li>
+                            <li>Investigated DHCP, IP addressing, connectivity and virtual networking issues.</li>
+                            <li>Used the lab to reproduce problems safely before applying the troubleshooting methodology to real-world support scenarios.</li>
+                        </ul>
+
+                        <div class="project-footer">
+                            <div class="tags">
+                                <span class="tag">Windows Server</span>
+                                <span class="tag">Linux</span>
+                                <span class="tag">VMware</span>
+                                <span class="tag">VirtualBox</span>
+                            </div>
+                            <span class="project-arrow">Case study →</span>
                         </div>
                     </a>
 
-                    <a href="#" class="project-card">
-                        <div class="project-type">NETWORKING</div>
-                        <h3>Enterprise Networking Lab</h3>
-                        <p>
-                            Practiced enterprise networking concepts including VLANs, OSPF,
-                            VRRP, subnetting and network troubleshooting using managed switches.
-                        </p>
 
-                        <div class="tags">
-                            <span class="tag">VLAN</span>
-                            <span class="tag">OSPF</span>
-                            <span class="tag">VRRP</span>
-                            <span class="tag">Routing</span>
+                    <a href="#" class="project-card">
+                        <div class="project-type">ENTERPRISE NETWORKING</div>
+                        <h3>Routing, Switching & High Availability Lab</h3>
+
+                        <ul class="project-details">
+                            <li>Worked with Aruba networking equipment in a hands-on enterprise networking environment.</li>
+                            <li>Configured and investigated VLAN segmentation and inter-network connectivity.</li>
+                            <li>Practiced OSPF routing and analyzed how routing information moves between network devices.</li>
+                            <li>Worked with VRRP concepts for gateway redundancy and high availability.</li>
+                            <li>Applied subnetting and IP addressing while troubleshooting connectivity between network segments.</li>
+                            <li>Used structured network troubleshooting to isolate configuration and connectivity issues.</li>
+                        </ul>
+
+                        <div class="project-footer">
+                            <div class="tags">
+                                <span class="tag">Aruba</span>
+                                <span class="tag">VLAN</span>
+                                <span class="tag">OSPF</span>
+                                <span class="tag">VRRP</span>
+                            </div>
+                            <span class="project-arrow">Case study →</span>
                         </div>
                     </a>
 
-                    <a href="#" class="project-card">
-                        <div class="project-type">AUTOMATION / PYTHON</div>
-                        <h3>Apache Log Analysis Tool</h3>
-                        <p>
-                            Developed a Python-based tool for analyzing Apache logs and extracting
-                            useful information from web server activity.
-                        </p>
 
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Logs</span>
-                            <span class="tag">Automation</span>
-                            <span class="tag">Linux</span>
+                    <a href="#" class="project-card">
+                        <div class="project-type">IT AUTOMATION / OPERATIONS</div>
+                        <h3>Atera Monitoring & Support Workflow</h3>
+
+                        <ul class="project-details">
+                            <li>Worked with Atera as an RMM and IT support platform in a live IT environment.</li>
+                            <li>Investigated failed package retries and unusually high data usage associated with endpoint activity.</li>
+                            <li>Created enhanced logs and gathered troubleshooting evidence to isolate the behavior.</li>
+                            <li>Worked with Atera Support to investigate the issue and improve understanding of retry behavior.</li>
+                            <li>Applied a methodical troubleshooting process instead of treating repeated endpoint activity as an isolated device problem.</li>
+                        </ul>
+
+                        <div class="project-footer">
+                            <div class="tags">
+                                <span class="tag">Atera</span>
+                                <span class="tag">RMM</span>
+                                <span class="tag">Monitoring</span>
+                                <span class="tag">Troubleshooting</span>
+                            </div>
+                            <span class="project-arrow">Case study →</span>
                         </div>
                     </a>
 
@@ -712,62 +1048,158 @@
             <div class="container">
 
                 <div class="section-heading">
-                    <div class="eyebrow">03 / Experience</div>
-                    <h2>Professional experience.</h2>
-
+                    <div class="eyebrow">02 / Experience</div>
+                    <h2>Technical experience backed by customer service.</h2>
                     <p class="section-description">
-                        A practical background supporting users, managing endpoints and working
-                        with real-world IT environments.
+                        My experience spans hands-on IT support, endpoint administration,
+                        NOC-style technical operations and high-volume customer service.
                     </p>
                 </div>
 
                 <div class="experience-list">
 
+                    <!-- Trooh -->
                     <div class="experience-card">
-                        <div class="experience-date">2026 — PRESENT</div>
+                        <div class="experience-date">MAY 2026 — PRESENT</div>
 
                         <div>
-                            <h3>IT Intern</h3>
+                            <h3>IT Intern / NOC Technical Support</h3>
                             <div class="experience-company">Trooh</div>
 
-                            <p>
-                                IT support, endpoint setup and troubleshooting, hardware deployment,
-                                inventory management, remote support, documentation and internal
-                                technology projects.
-                            </p>
+                            <div class="role-highlight">
+                                <span class="role-badge">IT SUPPORT</span>
+                                <span class="role-badge">SYSTEMS / ADMIN</span>
+                                <span class="role-badge">NOC SUPPORT</span>
+                                <span class="role-badge">ENDPOINTS</span>
+                            </div>
+
+                            <ul>
+                                <li>Provide Tier 1–2 technical support for 50+ users across four offices, troubleshooting Windows endpoints, Microsoft 365, printers, Wi-Fi, peripherals and connectivity issues.</li>
+                                <li>Support endpoint deployment, enrollment, reimaging and configuration using Microsoft Intune and other management tools.</li>
+                                <li>Package and deploy approximately 10 business applications through Intune, including Chrome, Adobe Acrobat,and other endpoint software.</li>
+                                <li>Administer and troubleshoot Atera, TeamViewer and other remote-management/support platforms used to maintain endpoints.</li>
+                                <li>Perform IT administration tasks including asset tracking, inventory, documentation, onboarding support, device preparation and vendor coordination.</li>
+                                <li>Support NOC-style operations by monitoring technology environments, investigating connectivity and endpoint issues, coordinating remediation and escalating issues when required.</li>
+                                <li>Assumed additional NOC Technical Support Specialist responsibilities following a team transition, expanding the role beyond traditional help-desk support.</li>
+                                <li>Led the transition from three legacy phone systems to Dialpad by participating in demos and meetings, coordinating implementation activities and supporting ongoing Dialpad administration.</li>
+                                <li>Investigated Atera package-retry and data-usage behavior, created enhanced logs and worked directly with Atera Support to investigate and improve understanding of the issue.</li>
+                                <li>Maintain technical documentation and SOP-style information so recurring issues can be resolved consistently.</li>
+                            </ul>
+
+                            <div class="achievement-callout">
+                                <strong>Why this role matters:</strong>
+                                This position combines hands-on IT support with endpoint administration,
+                                operational troubleshooting, vendor coordination and NOC-style technical
+                                support — giving me experience across both the user-facing and infrastructure
+                                sides of IT operations.
+                            </div>
                         </div>
                     </div>
 
+
+                    <!-- Seneca -->
                     <div class="experience-card">
-                        <div class="experience-date">2025 — 2026</div>
+                        <div class="experience-date">CO-OP / STUDENT SERVICE DESK</div>
 
                         <div>
-                            <h3>ITS Technologist</h3>
-                            <div class="experience-company">Seneca Polytechnic — Student Service Desk</div>
+                            <h3>ITS Technologist — Co-op</h3>
+                            <div class="experience-company">Seneca Polytechnic • Student Service Desk</div>
 
-                            <p>
-                                Frontline technical support, laptop imaging, loaner-device management,
-                                hardware and software troubleshooting, inventory and service-desk
-                                ticket management.
-                            </p>
+                            <ul>
+                                <li>Delivered frontline Tier 1 technical support to students and staff in a high-volume service-desk environment.</li>
+                                <li>Handled 275+ support cases, with peak periods reaching approximately 90 tickets per week.</li>
+                                <li>Troubleshot Windows computers, software, printers, connectivity and common Microsoft 365 issues.</li>
+                                <li>Supported laptop loaner operations, device imaging, hardware preparation and inventory management.</li>
+                                <li>Performed structured ticket triage, documented troubleshooting steps and escalated issues when required.</li>
+                                <li>Worked directly with users to understand symptoms, explain technical solutions clearly and restore service with minimal disruption.</li>
+                                <li>Used Salesforce Lightning and service-desk workflows to manage support requests and maintain accurate case information.</li>
+                            </ul>
                         </div>
                     </div>
 
+
+                    <!-- Staples -->
                     <div class="experience-card">
-                        <div class="experience-date">PREVIOUS</div>
+                        <div class="experience-date">PART-TIME</div>
 
                         <div>
-                            <h3>Technology Retail & Customer Support</h3>
-                            <div class="experience-company">Staples</div>
+                            <h3>Retail Technology Associate</h3>
+                            <div class="experience-company">Staples Canada</div>
 
-                            <p>
-                                Customer-facing technical assistance, hardware and software support,
-                                product troubleshooting and technology recommendations.
-                            </p>
+                            <ul>
+                                <li>Provide customer-facing technology support across laptops, mobile devices, printers and peripherals.</li>
+                                <li>Explain technical concepts in simple language and adapt communication to customers with different levels of technical knowledge.</li>
+                                <li>Maintain accuracy while handling multiple customer requests in a fast-paced retail environment.</li>
+                                <li>Support store operations through inventory handling, product organization and reliable day-to-day execution.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- McDonald's -->
+                    <div class="experience-card">
+                        <div class="experience-date">OCT 2024 — NOV 2025</div>
+
+                        <div>
+                            <h3>Crew Member — Part-Time</h3>
+                            <div class="experience-company">McDonald's</div>
+
+                            <ul>
+                                <li>Delivered fast-paced customer service while maintaining accuracy in orders, payments and customer requests.</li>
+                                <li>Worked effectively as part of a high-volume team where communication, reliability and speed were critical to daily operations.</li>
+                                <li>Followed food safety, workplace safety and operational procedures consistently while maintaining service standards during busy periods.</li>
+                                <li>Demonstrated strong punctuality, reliability and work ethic while balancing part-time employment with full-time post-secondary studies.</li>
+                                <li>Helped train new team members and supported coworkers during peak periods to keep operations running smoothly.</li>
+                                <li>Maintained a professional and positive attitude when dealing with customers, coworkers and time-sensitive situations.</li>
+                            </ul>
+
+                            <div class="achievement-callout">
+                                <strong>Employee of the Month:</strong>
+                                Recognized for excellence in customer service, dedication,
+                                reliability, strong work ethic and positive contribution to the team.
+                            </div>
                         </div>
                     </div>
 
                 </div>
+
+
+                <!-- Professional strengths -->
+                <div class="section-heading" style="margin-top: 70px; margin-bottom: 22px;">
+                    <div class="eyebrow">Professional Strengths</div>
+                    <h2 style="font-size: clamp(1.7rem, 3vw, 2.3rem);">
+                        The habits behind the technical work.
+                    </h2>
+                </div>
+
+                <div class="strengths-grid">
+
+                    <div class="strength-card">
+                        <h3>Reliability & Punctuality</h3>
+                        <p>
+                            Consistent attendance, punctuality and follow-through are
+                            habits I've developed across both customer-service and IT roles.
+                        </p>
+                    </div>
+
+                    <div class="strength-card">
+                        <h3>Customer Service</h3>
+                        <p>
+                            Comfortable working with users under pressure, listening to the
+                            actual problem and explaining technical solutions without unnecessary jargon.
+                        </p>
+                    </div>
+
+                    <div class="strength-card">
+                        <h3>Work Ethic & Ownership</h3>
+                        <p>
+                            I take ownership of problems, investigate beyond the obvious symptom,
+                            document what I find and follow issues through to resolution or escalation.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
         </section>
 
@@ -776,33 +1208,52 @@
             <div class="container">
 
                 <div class="section-heading">
-                    <div class="eyebrow">04 / Technical Skills</div>
-                    <h2>Tools & technologies.</h2>
+                    <div class="eyebrow">04 / Skills & Technologies</div>
+                    <h2>The tools behind the work.</h2>
+                    <p class="section-description">
+                        Technologies grouped by the type of work I use them for,
+                        with emphasis on tools I have actually worked with.
+                    </p>
                 </div>
 
                 <div class="skills-grid">
 
                     <div class="skill-group">
-                        <h3>Systems</h3>
+                        <h3>IT Support & ITSM</h3>
                         <ul>
-                            <li>Windows 10 / 11</li>
-                            <li>Windows Server</li>
-                            <li>Linux</li>
-                            <li>Microsoft 365</li>
-                            <li>Active Directory</li>
-                            <li>PowerShell</li>
+                            <li>Tier 1–2 Technical Support</li>
+                            <li>Ticket Triage & Escalation</li>
+                            <li>Remote Support</li>
+                            <li>IT Documentation / SOPs</li>
+                            <li>Asset & Inventory Management</li>
+                            <li>Atera</li>
+                            <li>Salesforce Lightning</li>
                         </ul>
                     </div>
 
                     <div class="skill-group">
-                        <h3>Cloud & Endpoint</h3>
+                        <h3>Endpoint Management</h3>
                         <ul>
                             <li>Microsoft Intune</li>
-                            <li>Microsoft Entra ID</li>
-                            <li>Microsoft Azure</li>
                             <li>Win32 App Packaging</li>
-                            <li>Azure VPN</li>
-                            <li>Endpoint Management</li>
+                            <li>Windows 10 / 11</li>
+                            <li>Application Deployment</li>
+                            <li>Device Enrollment</li>
+                            <li>Imaging / Reimaging</li>
+                            <li>TeamViewer</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Microsoft 365 & Collaboration</h3>
+                        <ul>
+                            <li>Microsoft 365</li>
+                            <li>Microsoft Teams</li>
+                            <li>Outlook</li>
+                            <li>SharePoint</li>
+                            <li>OneDrive</li>
+                            <li>HubSpot</li>
+                            <li>Dialpad</li>
                         </ul>
                     </div>
 
@@ -811,25 +1262,87 @@
                         <ul>
                             <li>TCP/IP</li>
                             <li>DNS / DHCP</li>
+                            <li>Subnetting</li>
                             <li>VLANs</li>
-                            <li>OSPF / VRRP</li>
-                            <li>VPN / IPsec</li>
-                            <li>Wireshark</li>
+                            <li>OSPF</li>
+                            <li>VRRP</li>
+                            <li>IPsec VPN</li>
+                            <li>Wi-Fi Troubleshooting</li>
                         </ul>
                     </div>
 
                     <div class="skill-group">
-                        <h3>Security</h3>
+                        <h3>Cloud & Infrastructure</h3>
                         <ul>
-                            <li>Splunk</li>
-                            <li>Suricata</li>
-                            <li>OSSIM</li>
-                            <li>Nessus</li>
-                            <li>Metasploit</li>
-                            <li>Security Monitoring</li>
+                            <li>Microsoft Azure</li>
+                            <li>Virtual Networks</li>
+                            <li>VPN Gateway</li>
+                            <li>Network Security Groups</li>
+                            <li>Azure VM</li>
+                            <li>VMware</li>
+                            <li>VirtualBox</li>
                         </ul>
                     </div>
 
+                    <div class="skill-group">
+                        <h3>Systems</h3>
+                        <ul>
+                            <li>Windows Server</li>
+                            <li>Windows 10 / 11</li>
+                            <li>Linux</li>
+                            <li>Kali Linux</li>
+                            <li>Endpoint Troubleshooting</li>
+                            <li>Hardware Troubleshooting</li>
+                            <li>PowerShell — Basic</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Security & Network Tools</h3>
+                        <ul>
+                            <li>Wireshark</li>
+                            <li>Nessus</li>
+                            <li>OSSIM / AlienVault</li>
+                            <li>Suricata</li>
+                            <li>Metasploit</li>
+                            <li>Security Lab Environments</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Business & Productivity</h3>
+                        <ul>
+                            <li>HubSpot</li>
+                            <li>Microsoft Office</li>
+                            <li>Excel</li>
+                            <li>SharePoint</li>
+                            <li>Teams</li>
+                            <li>Technical Documentation</li>
+                            <li>Vendor Coordination</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Education -->
+        <section id="education">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">05 / Education</div>
+                    <h2>Foundation built through technology.</h2>
+                </div>
+                <div class="education-card">
+                    <div class="education-year">2024 — 2026</div>
+                    <div>
+                        <h3>Diploma — Computer Systems Technician</h3>
+                        <div class="education-school">Seneca Polytechnic • Toronto, Ontario</div>
+                        <p>Built a broad technical foundation across computer systems, networking, operating systems, virtualization, cloud technologies and cybersecurity, complemented by practical labs and professional IT support experience.</p>
+                        <div class="honours">4.0 / 4.0 CGPA • 4× President's List • High Honours</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -840,12 +1353,12 @@
 
                 <div class="contact-box">
                     <div>
-                        <div class="eyebrow">05 / Contact</div>
+                        <div class="eyebrow">06 / Contact</div>
                         <h2>Let's connect.</h2>
 
                         <p>
                             I'm interested in opportunities across IT support, systems administration,
-                            networking, NOC and cybersecurity. For technical roles, you can explore
+                            endpoint management, networking and NOC operations. For technical roles, you can explore
                             my projects above or download my resume.
                         </p>
                     </div>
